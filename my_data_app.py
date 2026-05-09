@@ -14,26 +14,8 @@ import base64
 
 # CONFIGURATION — BACKGROUND
 
-def set_bg_image(image_file):
-    with open(image_file, "rb") as f:
-        encoded = base64.b64encode(f.read()).decode()
-    st.markdown(
-        f"""
-        <style>
-        .stApp {{
-            background-image: url("data:image/jpg;base64,{encoded}");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-        }}
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
-
-set_bg_image("image/img_file2.jpg")
-
+# Background supprimé pour compatibilité Streamlit Cloud
+# Tu peux remettre une image hébergée en ligne plus tard
 
 
 # CSS — CUSTOM PREMIUM DESIGN
